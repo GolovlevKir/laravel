@@ -17,7 +17,11 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    {{-- Подключаем partials/bootstrap.blade.php --}}
+    @include('partials.bootstrap')
+
+    {{-- Выводим стек со стилями CSS --}}
+    @stack('styles')
 </head>
 <body>
     <div id="app">
