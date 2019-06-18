@@ -158,6 +158,6 @@ class EntryController extends Controller
 
     public function __construct()
 {
-    // $this->authorizeResource(Entry::class);
+    $this->authorizeResource(Entry::class);
 }
 }
