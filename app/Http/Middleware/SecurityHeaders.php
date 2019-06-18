@@ -30,7 +30,7 @@ class SecurityHeaders
         $response->header("X-Content-Security-Policy", "default-src 'self' 'unsafe-inline' stackpath.bootstrapcdn.com code.jquery.com cdnjs.cloudflare.com fonts.googleapis.com fonts.gstatic.com");
         $response->header("Content-Security-Policy", "default-src 'self' 'unsafe-inline' stackpath.bootstrapcdn.com code.jquery.com cdnjs.cloudflare.com fonts.googleapis.com fonts.gstatic.com");
         $response->header("X-Webkit-CSP", "default-src 'self' 'unsafe-inline' stackpath.bootstrapcdn.com code.jquery.com cdnjs.cloudflare.com fonts.googleapis.com fonts.gstatic.com" );
-        $response->header("strict-transport-security", "max-age=31536000' 'includeSubDomains' stackpath.bootstrapcdn.com code.jquery.com cdnjs.cloudflare.com fonts.googleapis.com fonts.gstatic.com" );
+        $response->header("strict-transport-security", "31536000' 'includeSubDomains'" );
         // $response->header('Feature-Policy', 'vibrate "self"', 'geolocation "self"');
         // $response->header('Set-Cookie', 'vibrate "self"', 'geolocation "self"');
 
