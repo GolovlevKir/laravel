@@ -27,10 +27,10 @@ class SecurityHeaders
 
         // Разрешаем браузеру остановить загрузку страницы, если он заметит XSS.
         $response->header('X-XSS-Protection', '1; mode=block');
-        $response->header('X-Content-Security-Policy', 'default-src "self"');
-        $response->header('Content-Security-Policy', 'default-src "self" stackpath.bootstrapcdn.com code.jquery.com cdnjs.cloudflare.com 127.0.0.1:8000');
-        $response->header('X-Webkit-CSP', 'default-src "self"' );
-        $response->header('Feature-Policy', 'vibrate "self"', 'geolocation "self"');
+        $response->header("X-Content-Security-Policy", "default-src 'self' 'unsafe-inline' stackpath.bootstrapcdn.com code.jquery.com cdnjs.cloudflare.com fonts.googleapis.com fonts.gstatic.com");
+        $response->header("Content-Security-Policy", "default-src 'self' 'unsafe-inline' stackpath.bootstrapcdn.com code.jquery.com cdnjs.cloudflare.com fonts.googleapis.com fonts.gstatic.com");
+        $response->header("X-Webkit-CSP", "default-src 'self' 'unsafe-inline' stackpath.bootstrapcdn.com code.jquery.com cdnjs.cloudflare.com fonts.googleapis.com fonts.gstatic.com" );
+        // $response->header('Feature-Policy', 'vibrate "self"', 'geolocation "self"');
         // $response->header('Set-Cookie', 'vibrate "self"', 'geolocation "self"');
 
         return $response;
