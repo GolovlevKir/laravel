@@ -31,7 +31,7 @@ class SecurityHeaders
         $response->header('Content-Security-Policy', 'default-src "self" stackpath.bootstrapcdn.com code.jquery.com cdnjs.cloudflare.com 127.0.0.1:8000');
         $response->header('X-Webkit-CSP', 'default-src "self"' );
         $response->header('Feature-Policy', 'vibrate "self"', 'geolocation "self"');
-        $response->header('Set-Cookie', 'vibrate "self"', 'geolocation "self"');
+        // $response->header('Set-Cookie', 'vibrate "self"', 'geolocation "self"');
 
         return $response;
     }
